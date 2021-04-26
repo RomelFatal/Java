@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+    // input scanner class
+        var scanner = new Scanner(System.in);
+
+    // get input value from user
+        System.out.print("Enter a value: ");
+        var input = scanner.nextLine();
+        System.out.println(input);
+  
+    // collect more input value from user
+        System.out.print("Enter number 1: ");
+        var number1 = scanner.nextInt();
+        System.out.print("Enter number 2: ");
+        var number2 = scanner.nextInt();
+
+    // add input values then display result on to the user
+        var sum = number1 + number2;
+        System.out.println("The sum is " + sum);
+    }
+}
