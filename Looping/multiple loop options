@@ -1,0 +1,40 @@
+public class Main {
+
+    public static void main(String[] args) {
+// Month array
+
+        String[] months =
+                {"January", "February", "March",
+                        "April", "May", "June",
+                        "July", "August", "September",
+                        "October", "November", "December"};
+
+//  Loop using the for loop method
+//        for (int i = 0; i < months.length; i++) {
+//            System.out.println(months[i]);
+//        }
+
+//  Loop using the for each loop method
+//        for (var month : months) {
+//            System.out.println(month);
+//        }
+
+// Loop using the while loop method
+//        var whileCounter = 0;
+//        while (whileCounter < months.length) {
+//            System.out.println(months[whileCounter]);
+//            whileCounter++;
+//        }
+
+// Loop using the do while loop method
+        var doCounter = 0;
+        do {
+            System.out.println(months[doCounter]);
+            doCounter++;
+        } while (doCounter < months.length);
+
+        for (int i = 0; i < months.length; i++) {
+            System.out.println(months[i]);
+        }
+        }
+    }
