@@ -1,0 +1,25 @@
+public class Main {
+
+    public static void main(String[] args) {
+
+        // Catching exception
+        String s = null;
+        //String s = "";
+
+        try {
+            var sub = s.substring(1);
+        } catch (NullPointerException e) {
+            // catch null string exception
+            e.printStackTrace();
+        } catch (StringIndexOutOfBoundsException e){
+            // catch out of bound string exception
+            e.printStackTrace();
+            System.out.println("Out of bounds: " + e.getMessage());
+        } catch (Exception e) {
+            // general exception catch
+            e.printStackTrace();
+            System.out.println("I don't know what happened: " +e.getMessage());
+        }
+        System.out.println("I'm not dead yet!");
+    }
+}
