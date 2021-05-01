@@ -1,0 +1,61 @@
+// ClothingItem class with constructor
+public class ClothingItem {
+    /** private protected fields accessible only to
+    program inside the class
+     */
+    private String type;
+    private String size;
+    private double price;
+    private int quantity;
+
+    // Class constructor
+    public ClothingItem(String type, String size, double price, int quantity) {
+        this.type = type;
+        this.size = size;
+        this.price = price;
+        this.quantity = quantity;
+    }
+
+    // allowing program outside the class to access fields
+    // get type
+    public String getType() {return type;}
+    // set typ
+    public void setType(String type) {this.type = type;}
+    // get size
+    public String getSize() {return size;}
+    // set size
+    public void setSize(String size) {this.size = size;}
+    // get price
+    public double getPrice() {return price;}
+    // set price
+    public void setPrice(double price) {this.price = price;}
+    // get quantity
+    public int getQuantity() {return quantity;}
+    // set quantity
+    public void setQuantity(int quantity) {this.quantity = quantity;}
+}
+
+
+
+import com.company.model.ClothingItem;
+
+import java.text.NumberFormat;
+
+public class Main {
+
+    public static void main(String[] args) {
+        // constructor
+        var item = new ClothingItem("Shirt", "M", 19.99, 3);
+      /*  item.setType("Shirt");
+        item.setSize("M");
+        item.setPrice(19.99);
+        item.setQuantity(3);*/
+
+        var totalPrice = item.getPrice() * item.getQuantity();
+        var formatter = NumberFormat.getCurrencyInstance();
+        var output = String.format("Your %s order will cost %s",
+                item.getType(),
+                formatter.format(totalPrice));
+        System.out.println(output);
+    }
+}
