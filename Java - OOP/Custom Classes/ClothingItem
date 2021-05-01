@@ -1,4 +1,4 @@
-// ClothingItem class
+// ClothingItem class no constructor
 public class ClothingItem {
     /** private protected fields accessible only to
     program inside the class
