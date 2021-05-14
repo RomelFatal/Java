@@ -24,7 +24,7 @@ public class PrimeNumberMethod {
                     // Print the number and advance to the new line
                     System.out.printf("%-5d\n", number);
                 } else
-                    System.out.printf("%-5", number);
+                    System.out.printf("%-5d", number);
             }
 
             // Check whether the next number is prime
