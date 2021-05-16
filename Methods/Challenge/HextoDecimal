@@ -1,0 +1,39 @@
+/* This program prompts the user to enter a hex number
+as a string and convert it into a decimal */
+
+import java.util.Scanner;
+
+public class Hex2Decimal {
+    /**
+     * Main method
+     */
+    public static void main(String[] args) {
+        // Create scanner input to collect user input
+        Scanner input = new Scanner(System.in);
+
+        // Prompt the user to enter a string
+        System.out.print("Enter a hex number: ");
+        String hex = input.nextLine();
+
+        System.out.println("The decimal value hex "
+        + hex + " is " + hexToDecimal(hex.toUpperCase()));
+    }
+
+    // Definition of hexToDecimal method conversion
+    public static int hexToDecimal(String hex){
+        int decimalValue = 0;
+        for (int i = 0; i < hex.length(); i++) {
+            char hexChar = hex.charAt(i);
+            decimalValue = decimalValue * 16 + hexCharToDecimal(hexChar);
+        }
+        return decimalValue;
+    }
+
+    // Conversion of character input from user to integer
+    public static int hexCharToDecimal(char ch) {
+        if (ch >= 'A' && ch <= 'F')
+            return 10 + ch - 'A';
+        else // ch is '0', '1', ..., or '9'
+            return ch - '0';
+    }
+}
